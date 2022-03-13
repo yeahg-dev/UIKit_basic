@@ -44,17 +44,39 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="s0U-6r-c3C"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQU-FI-uJ0" customClass="CustomView" customModule="UIKit_basic" customModuleProvider="target">
+                                <rect key="frame" x="87" y="112" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-Si-CWg">
+                                <rect key="frame" x="157" y="274" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IDn-sR-Kcz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="☝️redraw"/>
+                                <connections>
+                                    <action selector="redrawCustomView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REk-sr-QXW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bUY-2S-nld" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EnN-br-SFs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JQU-FI-uJ0" secondAttribute="trailing" constant="87" id="GMQ-f2-QSi"/>
+                            <constraint firstItem="JQU-FI-uJ0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="OhY-VH-hmQ"/>
                             <constraint firstItem="bUY-2S-nld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vqj-Lt-IUM"/>
                             <constraint firstItem="ABe-PP-MWa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W50-79-9XE"/>
+                            <constraint firstItem="JQU-FI-uJ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="nOO-U4-q8H"/>
+                            <constraint firstItem="FPk-Si-CWg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qKw-Gi-Ngr"/>
                             <constraint firstItem="ABe-PP-MWa" firstAttribute="top" secondItem="bUY-2S-nld" secondAttribute="bottom" constant="51" id="r9W-Lk-lL8"/>
+                            <constraint firstItem="FPk-Si-CWg" firstAttribute="top" secondItem="JQU-FI-uJ0" secondAttribute="bottom" constant="34" id="rfm-r3-KOZ"/>
+                            <constraint firstItem="bUY-2S-nld" firstAttribute="top" secondItem="JQU-FI-uJ0" secondAttribute="bottom" constant="133" id="yYq-xC-LAO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customView" destination="JQU-FI-uJ0" id="ico-jl-Qxj"/>
                         <outlet property="grayView" destination="ABe-PP-MWa" id="6Tm-fZ-any"/>
                         <outlet property="rectangularSubview" destination="iDw-Fc-nrb" id="lAq-d2-GI4"/>
                         <outlet property="rectangularView" destination="bUY-2S-nld" id="H5h-dh-4Hp"/>
@@ -119,6 +141,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rectangularView: UIView!
     @IBOutlet weak var rectangularSubview: UIView!
     @IBOutlet weak var grayView: UIView!
+    @IBOutlet weak var customView: CustomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +47,8 @@ class ViewController: UIViewController {
         self.grayView.addSubview(subview)
     }
 
+    @IBAction func redrawCustomView(_ sender: Any) {
+        customView.setNeedsDisplay()
+    }
 }
 
