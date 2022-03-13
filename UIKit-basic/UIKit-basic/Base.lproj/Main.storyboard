@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xsl-gq-rbz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -34,15 +34,28 @@
                                     <constraint firstAttribute="width" constant="300" id="rlt-rW-dXM"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABe-PP-MWa">
+                                <rect key="frame" x="107" y="574" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="E2O-Fp-w0D"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="J3s-WI-5jq"/>
+                                    <constraint firstAttribute="height" constant="200" id="drf-nA-NfX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="s0U-6r-c3C"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bUY-2S-nld" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EnN-br-SFs"/>
                             <constraint firstItem="bUY-2S-nld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vqj-Lt-IUM"/>
+                            <constraint firstItem="ABe-PP-MWa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W50-79-9XE"/>
+                            <constraint firstItem="ABe-PP-MWa" firstAttribute="top" secondItem="bUY-2S-nld" secondAttribute="bottom" constant="51" id="r9W-Lk-lL8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="grayView" destination="ABe-PP-MWa" id="6Tm-fZ-any"/>
                         <outlet property="rectangularSubview" destination="iDw-Fc-nrb" id="lAq-d2-GI4"/>
                         <outlet property="rectangularView" destination="bUY-2S-nld" id="H5h-dh-4Hp"/>
                     </connections>
@@ -97,6 +110,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

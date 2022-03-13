@@ -11,9 +11,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var rectangularView: UIView!
     @IBOutlet weak var rectangularSubview: UIView!
+    @IBOutlet weak var grayView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addBlueSubviewOnGrayView()
         self.printSubviewFrame()
 //        self.adjustViewByInset()
 //        self.adjustViewByOffset()
@@ -36,6 +38,12 @@ class ViewController: UIViewController {
     func printSubviewFrame() {
         print(self.rectangularView.frame)
         print(self.rectangularSubview.frame)
+    }
+    
+    func addBlueSubviewOnGrayView() {
+        let subview = UIView(frame: CGRect(x: 30, y: 30, width: 50, height: 50))
+        subview.backgroundColor = .blue
+        self.grayView.addSubview(subview)
     }
 
 }
