@@ -21,6 +21,5 @@ class CustomView: UIView {
         
         UIRectFrame(myFrame.insetBy(dx: 10, dy: 10))
     }
- 
 
 }

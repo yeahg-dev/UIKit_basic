@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBlueSubviewOnGrayView()
-        self.printSubviewFrame()
-//        self.adjustViewByInset()
+//        self.printSubviewFrame()
+        self.adjustViewByInset()
 //        self.adjustViewByOffset()
     }
     
@@ -26,13 +26,16 @@ class ViewController: UIViewController {
         print(self.rectangularView.frame)
         let inests = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
         self.rectangularView.frame = rectangularView.frame.inset(by: inests)
-        self.rectangularView.setNeedsDisplay()
+        self.rectangularView.layer.displayIfNeeded()
+        self.rectangularView.updateConstraintsIfNeeded()
+        self.rectangularView.layoutIfNeeded()
         print(rectangularView.frame) // (87.0, 403.0, 240.0, 90.0)
     }
     
     func adjustViewByOffset() {
         print(self.rectangularView.frame)
         self.rectangularView.frame = rectangularView.frame.offsetBy(dx: 30, dy: 30)
+        self.rectangularView.layoutIfNeeded()
         print(self.rectangularView.frame)
     }
     
